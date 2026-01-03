@@ -6,7 +6,7 @@ const moonIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
 <button
   id="theme-toggle"
   class="theme-toggle"
-  title="テーマを切り替える"
+  title="Theme"
   set:html={moonIcon}
 />
 
@@ -91,13 +91,13 @@ const moonIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
     }
   };
 
-    const setButtonIcon = (theme) => {
-        if (theme === 'dark') {
-            themeToggle.innerHTML = moonIcon;
-        } else {
-            themeToggle.innerHTML = sunIcon;
-        }
-    };
+  const setButtonIcon = (theme) => {
+    if (theme === "dark") {
+      themeToggle.innerHTML = moonIcon;
+    } else {
+      themeToggle.innerHTML = sunIcon;
+    }
+  };
 
   const toggleTheme = () => {
     const currentTheme =
