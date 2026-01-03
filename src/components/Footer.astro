@@ -3,20 +3,13 @@ const today = new Date();
 ---
 
 <footer>
-  <p>&copy;2023-{today.getFullYear()} All rights reserved.</p>
+  <p>&copy; {today.getFullYear()} All rights reserved.</p>
 </footer>
 
 <style>
   footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 3rem; /* Set a fixed height for the footer */
-    padding: 0.5rem 1rem; /* Adjust padding to fit the new height */
-    display: flex; /* Use flex to center content vertically */
-    align-items: center; /* Center content vertically */
-    justify-content: center; /* Center content horizontally */
+    padding: 2rem 1rem;
     text-align: center;
     color: var(--theme-text-secondary);
+  }
 </style>
