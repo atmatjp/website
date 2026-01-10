@@ -1,5 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+const messages = [
+  "年中北枕で就寝",
+  "猫は正義",
+  "静かに、しかし確実に",
+  "豆を育てよう",
+  "深爪は避けよう",
+];
+const randomMessage = messages[Math.floor(Math.random() * messages.length)];
 ---
 
 <Layout title="小林のページ">
@@ -9,7 +18,7 @@ import Layout from "../layouts/Layout.astro";
         <img class="icon" src="/icon.jpg" alt="Profile Icon" />
       </a>
       <h1 class="name">小林(atmatjp)</h1>
-      <p class="bio">年中北枕で就寝</p>
+      <p class="bio">{randomMessage}</p>
       <div class="divider"></div>
       <div class="socials">
         <a
@@ -167,7 +176,7 @@ import Layout from "../layouts/Layout.astro";
   const lightboxInstance = fsLightboxInstances["default"];
 
   if (lightboxInstance) {
-        // Set the background to be semi-transparent black for a better user experience.
-        lightboxInstance.props.backgroundColor = "rgba(20, 20, 20, 0.9)";
-      }
-    </script>
+    // Set the background to be semi-transparent black for a better user experience.
+    lightboxInstance.props.backgroundColor = "rgba(20, 20, 20, 0.9)";
+  }
+</script>
