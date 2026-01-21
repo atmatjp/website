@@ -1,0 +1,182 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const messages = [
+  "年中北枕で就寝",
+  "猫は正義",
+  "静かに、しかし確実に",
+  "豆を育てよう",
+  "深爪は避けよう",
+];
+const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+---
+
+<Layout title="小林のページ">
+  <main>
+    <div class="card">
+      <a data-fslightbox href="/icon.jpg">
+        <img class="icon" src="/icon.jpg" alt="Profile Icon" />
+      </a>
+      <h1 class="name">小林(atmatjp)</h1>
+      <p class="bio">{randomMessage}</p>
+      <div class="divider"></div>
+      <div class="socials">
+        <a
+          href="https://github.com/atmatjp"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-link"
+          aria-label="GitHub"
+          title="Github"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+            ><g fill="none"
+              ><path
+                d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"
+              ></path><path
+                fill="currentColor"
+                d="M7.024 2.31a9 9 0 0 1 2.125 1.046A11.4 11.4 0 0 1 12 3c.993 0 1.951.124 2.849.355a9 9 0 0 1 2.124-1.045c.697-.237 1.69-.621 2.28.032c.4.444.5 1.188.571 1.756c.08.634.099 1.46-.111 2.28C20.516 7.415 21 8.652 21 10c0 2.042-1.106 3.815-2.743 5.043a9.5 9.5 0 0 1-2.59 1.356c.214.49.333 1.032.333 1.601v3a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-.991c-.955.117-1.756.013-2.437-.276c-.712-.302-1.208-.77-1.581-1.218c-.354-.424-.74-1.38-1.298-1.566a1 1 0 0 1 .632-1.898c.666.222 1.1.702 1.397 1.088c.48.62.87 1.43 1.63 1.753c.313.133.772.22 1.49.122L8 17.98a4 4 0 0 1 .333-1.581a9.5 9.5 0 0 1-2.59-1.356C4.106 13.815 3 12.043 3 10c0-1.346.483-2.582 1.284-3.618c-.21-.82-.192-1.648-.112-2.283l.005-.038c.073-.582.158-1.267.566-1.719c.59-.653 1.584-.268 2.28-.031Z"
+              ></path></g
+            ></svg
+          >
+        </a>
+        <a
+          href="https://x.com/atmatjp"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-link"
+          aria-label="Twitter"
+          title="Twitter"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+            ><path
+              fill="currentColor"
+              d="M8.283 20.263c7.547 0 11.676-6.259 11.676-11.677q.002-.264-.008-.528A8.4 8.4 0 0 0 22 5.928a8.3 8.3 0 0 1-2.36.649a4.13 4.13 0 0 0 1.808-2.273a8.2 8.2 0 0 1-2.61.993A4.1 4.1 0 0 0 15.847 4a4.11 4.11 0 0 0-4.106 4.106c0 .32.04.632.104.936a11.65 11.65 0 0 1-8.46-4.29a4.115 4.115 0 0 0 1.273 5.482A4.15 4.15 0 0 1 2.8 9.722v.056a4.11 4.11 0 0 0 3.29 4.026a4 4 0 0 1-1.08.144q-.397 0-.77-.072a4.1 4.1 0 0 0 3.834 2.85a8.23 8.23 0 0 1-5.098 1.76c-.328 0-.656-.016-.976-.056a11.67 11.67 0 0 0 6.283 1.833"
+            ></path></svg
+          >
+        </a>
+        <a
+          href="https://last.fm/user/atmatjp"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-link"
+          aria-label="Last.fm"
+          title="LastFM"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+            ><path
+              fill="currentColor"
+              fill-rule="evenodd"
+              d="M2.519 7.88C3.62 6.7 5.282 6 7.5 6c.95 0 1.763.182 2.454.544c.694.364 1.208.88 1.598 1.462c.668.996 1.016 2.27 1.316 3.371l.097.356c.352 1.269.695 2.31 1.33 3.058C14.867 15.468 15.77 16 17.5 16c.433 0 1.435-.078 2.29-.382c.917-.325 1.21-.718 1.21-1.118c0-.217-.075-.412-.558-.665c-.507-.266-1.205-.45-2.073-.677l-.123-.033c-.848-.223-1.868-.497-2.67-.981C14.713 11.622 14 10.788 14 9.5c0-.884.526-1.766 1.272-2.391C16.05 6.456 17.154 6 18.5 6c2.828 0 4.185 1.616 4.47 2.757l-1.94.486C20.982 9.05 20.472 8 18.5 8c-.883 0-1.53.294-1.943.641c-.448.375-.557.743-.557.859c0 .397.163.661.61.932c.512.31 1.242.522 2.145.759l.2.052c.784.205 1.696.444 2.415.82c.83.435 1.63 1.18 1.63 2.437c0 1.762-1.457 2.619-2.54 3.003c-1.145.406-2.393.497-2.96.497c-2.216 0-3.716-.718-4.732-1.916c-.955-1.127-1.389-2.586-1.73-3.817l-.086-.313c-.325-1.18-.586-2.127-1.061-2.835a2.34 2.34 0 0 0-.865-.804C8.674 8.131 8.19 8 7.5 8c-1.782 0-2.87.55-3.519 1.245C3.318 9.955 3 10.94 3 12c0 .925.472 1.933 1.27 2.73C5.067 15.527 6.075 16 7 16c.888 0 1.566-.148 2.039-.317a3.3 3.3 0 0 0 .55-.25a2 2 0 0 0 .204-.14l1.414 1.414C10.64 17.276 9.19 18 7 18c-1.575 0-3.067-.777-4.145-1.855S1 13.575 1 12c0-1.44.432-2.956 1.519-4.12"
+              clip-rule="evenodd"></path></svg
+          >
+        </a>
+        <a
+          href="https://bookmeter.com/users/1592370/books/read"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-link"
+          aria-label="bookmeter"
+          title="Bookmeter"
+        >
+          <svg
+            role="img"
+            aria-label="bookmeter"
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+            ><path
+              fill="currentColor"
+              d="M.678 14.262h6.089V24H.678zm8.215 9.717h6.089V7.11H8.893zM17.234 0v24h6.089V0z"
+            ></path></svg
+          >
+        </a>
+
+        <a
+          href="https://blog.kby4.site"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-link"
+          aria-label="Blog"
+          title="Weblog"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 100 100"
+            ><path
+              fill="currentColor"
+              d="M28.958 18.46a4.403 4.403 0 0 0-1.615 6.028l2.9 5.025l-3.306.677L0 45.742L11.436 65.55l26.937-15.552l2.24-2.525l2.9 5.024a4.403 4.403 0 0 0 6.03 1.616l12.162-7.022a4.403 4.403 0 0 0 1.615-6.03l-2.9-5.024l3.306-.677l26.937-15.552L79.228 0L52.29 15.552l-2.24 2.525l-2.9-5.024a4.403 4.403 0 0 0-6.03-1.616ZM6.248 47.415l23.769-13.722l6.861 11.884L13.11 59.3ZM53.785 19.97L77.553 6.248l6.862 11.885l-23.769 13.722Zm38.44 44.878c-11.274-.189-22.738 2.606-33.178 8.705A63.5 63.5 0 0 0 34.237 100h4.298c4.991-9.194 12.446-17.2 22.096-22.924a36 36 0 0 1 3.312-1.375c1.493 2.387 4.686 6.609-.156 9.22c-3.779 2.502-2.301 13.542-8.24 8.42c-1.663-3.434.125-13.357-5.299-6.96c-.228 2.948 2.43 6.627-.533 7.74c1.062 4.017-2.838 3.532-4.248 2.346c-.773 1.374 1.936 2.02 1.818 3.533h.145c1.032-1.872 1.599-1.266 2.207 0h47.789c.41 0 .791-.104 1.135-.273c-1.05-.144-1.988-.689-2.42-2.428c-3.97-2.266-2.775-4.71.904-6.428c2.205-4.312-10.218-.677-3.938-5.924c-2.935 1.978-4.144 2.838-6.738-.693c3.214 4.383-4.52 4.994-2.908.328c.748-1.548-4.302-.864-1.223-3.436c2.215-1.456 12.128 5.174 9.71-.863c1.261-1.405-3.478-2.621-2.852-3.199c-3.293 3.652-8.62-2.76-10.205-5.398c1.37-.73 2.662-1.634 3.435-2.356A60 60 0 0 1 100 69.313v-3.84a64 64 0 0 0-7.775-.625m-6.592 6.916c-.215.044-.347.093-.418.142c-.5.348 2.009.726.418-.142m-14.15.465c.671.004.926.264-.057 1.015l-1.354.276c-1.269.01-1.712-.129-1.687-.319q1.152-.475 2.316-.9c.286-.047.557-.074.781-.072m16.787.945c-1.176.072-1.773.172-1.993.275c-.952.446 5.179.967 1.993-.275m4.687.398c-.641-.038-1.224.056-1.508.223c-.454.268-.14.722 1.94 1.135c1.472 1.6 1.04 3.04 2.12.187c-.257-1.056-1.484-1.482-2.552-1.545m-10.951 5.723c.244-.065 1.969 1.094.426.58c-.424-.401-.507-.558-.426-.58m-3.684 1.11c.365.042 1.23.898-.021.491c-.125-.253-.14-.393-.096-.455q.037-.048.117-.037m-6.054.98c1.127.045 1.45.785-1.006 2.66c-.766.442-1.684.796-2.584.578c-1.028-.836-.538-1.68.424-2.297c.925-.594 2.288-.977 3.166-.941m-26.16 11.568c-.068-.017-.151.007-.253.084c-.27.206-.662.78-1.16 1.895c-.802 1.086-1.29 5.17-.002 1.605c1.49-1.238 1.883-3.46 1.414-3.584m-4.538 5.395a1.1 1.1 0 0 0-.36.109c-.408.2-.88.7-1.398 1.543h3.096c-.21-.994-.672-1.723-1.338-1.652M63.79 52.735a7.45 7.45 0 0 1-9.139 5.312l-1.271 4.837c6.625 1.742 13.477-2.242 15.242-8.861z"
+              color="currentColor"></path></svg
+          >
+        </a>
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style is:global>
+  @import "../styles/Card.css";
+</style>
+<script>
+  // Import fslightbox from the installed npm package.
+  import fslightbox from "fslightbox";
+
+  // fslightbox relies on a global function and object for its data-attribute based API.
+  // We expose the imported module to the global window scope.
+  // @ts-ignore
+  window.fslightbox = fslightbox;
+
+  // This call finds all `data-fslightbox` attributes on the page and initializes the lightbox.
+  fslightbox();
+
+  // The instance created for elements with `data-fslightbox` is named 'default'.
+  // We can access it via the global `fsLightboxInstances` object.
+  // @ts-ignore
+  const lightboxInstance = fsLightboxInstances["default"];
+
+  if (lightboxInstance) {
+    // Set the background to be semi-transparent black for a better user experience.
+    lightboxInstance.props.backgroundColor = "rgba(20, 20, 20, 0.9)";
+  }
+</script>
+
+<style is:global>
+  @import "../styles/Card.css";
+</style>
+<script>
+  // Import fslightbox from the installed npm package.
+  import fslightbox from "fslightbox";
+
+  // fslightbox relies on a global function and object for its data-attribute based API.
+  // We expose the imported module to the global window scope.
+  // @ts-ignore
+  window.fslightbox = fslightbox;
+
+  // This call finds all `data-fslightbox` attributes on the page and initializes the lightbox.
+  fslightbox();
+
+  // The instance created for elements with `data-fslightbox` is named 'default'.
+  // We can access it via the global `fsLightboxInstances` object.
+  // @ts-ignore
+  const lightboxInstance = fsLightboxInstances["default"];
+
+  if (lightboxInstance) {
+    // Set the background to be semi-transparent black for a better user experience.
+    lightboxInstance.props.backgroundColor = "rgba(20, 20, 20, 0.9)";
+  }
+</script>
