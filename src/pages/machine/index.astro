@@ -1,0 +1,67 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="My PC">
+  <h2>My PC</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>PC</th>
+        <th>用途</th>
+        <th>OS</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>m2 MacBook</td>
+        <td>メインマシン</td>
+        <td>macOS</td>
+      </tr>
+      <tr>
+        <td>surface laptop</td>
+        <td>サブ機</td>
+        <td>windows</td>
+      </tr>
+      <tr>
+        <td>Let's note</td>
+        <td>サーバー化予定。linux入れて遊んでた。</td>
+        <td> - </td>
+      </tr>
+      <tr>
+        <td>Nec Mate MB-3</td>
+        <td>デスクトップ,サーバー用</td>
+        <td>debian</td>
+      </tr>
+      <tr>
+        <td>Nec Mate ML-4</td>
+        <td>色々</td>
+        <td>windows</td>
+      </tr>
+    </tbody>
+  </table>
+</Layout>
+
+<style>
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+  }
+  th,
+  td {
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    text-align: left;
+  }
+  th {
+    background-color: #f4f4f4;
+  }
+  @media (max-width: 480px) {
+    th,
+    td {
+      padding: 0.3rem;
+    }
+  }
+</style>

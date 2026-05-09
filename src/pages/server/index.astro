@@ -1,0 +1,58 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="Server">
+  <h1>Server</h1>
+  <img src="/mate.jpeg" alt="mate" width="300px" />
+  <p>
+    日本橋で手に入れたジャンクのmateをサーバー用として使っています。
+    ホストOSはすべてDebianです。ほんとはProxmoxとかも使ってみたいんだけど時間がない！
+    最近は友人の助けを借りながら、なんとかグラフィックボードを載せようと画策中。今のところNvidiaの業務用GPUであるQuadro
+    p1000が候補として浮上している。ただケースの加工が必要で、後々記事にでも書くかも。乞うご期待...
+  </p>
+  <p>
+    個人的にmateにはホンダのスーパーカブらしさを感じています。
+    両者とも堅牢な日本メーカーの製品で、企業のリース品が大量に市場に出回っていて安く手に入れられるし、さらに簡単に個人の好みに合わせて簡単にカスタムできる。
+    その道中で何かもし躓いてもwwwに行けば情報がゴロゴロ転がっているので楽にトラブルシューティングできるところとかも。
+  </p>
+  <p>
+    私自身、自作PC,自宅サーバー(とは言わないかもしれない)の入門機としてMateを購入したが正直かなり満足している。
+    今は全てにおいてよりコンパクトなmcタイプのMateに移行を進めている最中ですが、もし入門に最適なマシンを聞かれることがあれば今でも迷わずMateシリーズをお勧めするでしょう。
+  </p>
+  <h2>2026-04-29</h2>
+  <img src="/jitaku.jpeg" alt="jitaku" width="300px" />
+  <p>
+    ある程度の移行が完了しました。ジャンクのmc-mateで構築されたk3sクラスタ。
+    ラックはPETGで印刷したoptiplex用のものですがmcタイプ(USFF)のmateとシンデレラフィットしています。kubernetes全然ワカラナイので使えるようになりたい。
+  </p>
+  <p>
+    このページは主にMacかDebianのマシンで編集していて、差分をrsyncコマンドで特定のマシンに送っています。
+    GitHub Actionsというものを使えばもっと便利なことが実現できるらしい。
+  </p>
+  <h2>2026-05-09</h2>
+  <p>黒のデスクトップMateを研究室に寄贈した。</p>
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+    }
+    th,
+    td {
+      border: 1px solid #ccc;
+      padding: 0.5rem;
+      text-align: left;
+    }
+    th {
+      background-color: #f4f4f4;
+    }
+    @media (max-width: 480px) {
+      th,
+      td {
+        padding: 0.3rem;
+      }
+    }
+  </style>
+</Layout>

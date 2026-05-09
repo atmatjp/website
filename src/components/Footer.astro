@@ -4,15 +4,45 @@ const today = new Date();
 
 <footer>
   <p>
-    (c)2023-{today.getFullYear()} 小林
+    Powered by <a href="https://astro.build/">Astro.js</a>
   </p>
+  <p>Hosted on <a href="/server/">mate cluster</a></p>
+  <p>(c) 2023-{today.getFullYear()} 小林</p>
+  <img src="/banner.gif" alt="" width="88px" />
+  <a href="https://www.cloudflare.com/">
+    <img src="/cloud.png" alt="" width="88px" />
+  </a>
+  <div class="img">
+    <a href="https://www.debian.org/" target="_blank" rel="noopener noreferrer">
+      <img src="/debian.png" alt="Debian" />
+    </a>
+    <a
+      href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img src="/html5.png" alt="HTML5" />
+    </a>
+    <a
+      href="https://developer.mozilla.org/en-US/docs/Web/CSS"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img src="/css.png" alt="CSS" />
+    </a>
+  </div>
 </footer>
-<!--
+
 <style>
-  footer {
-    padding: 2rem 1rem;
+  footer .img {
     text-align: center;
-    color: var(--theme-text-secondary);
+    margin-top: 1rem;
+  }
+  footer .img a {
+    text-decoration: none;
+  }
+  footer p {
+    margin: 0;
+    padding: 0;
   }
 </style>
--->

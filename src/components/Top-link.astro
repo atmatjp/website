@@ -1,0 +1,13 @@
+---
+const path = Astro.url.pathname;
+
+const home = path === "/" || path === "/index.html";
+---
+
+{
+  !home && (
+    <p>
+      <a href="/">最上層へ</a>
+    </p>
+  )
+}

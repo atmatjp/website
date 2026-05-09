@@ -9,7 +9,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.16.6",
-    "fslightbox": "^3.4.1"
+    "astro": "^6.1.1",
+    "fslightbox": "^3.4.1",
+    "pnpm": "^10.30.2"
   }
 }

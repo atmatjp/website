@@ -1,7 +1,10 @@
 ---
-import ThemeToggle from "../components/ThemeToggle.astro";
+import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import InfoToggle from "../components/InfoToggle.astro";
+import TopLink from "../components/Top-link.astro";
+
+import "../styles/style.css";
+
 export interface Props {
   title: string;
 }
@@ -9,67 +12,29 @@ export interface Props {
 const { title } = Astro.props;
 ---
 
-<!doctype html>
-<html lang="en">
+<html lang="ja">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/icon.jpg" />
-    <meta name="generator" content={Astro.generator} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/icon.jpg" type="image/x-icon" />
     <title>{title}</title>
   </head>
   <body>
-    <slot />
-    <Footer />
+    <div class="all">
+      <!--
+      <Header />
+    -->
+      <slot />
+      <TopLink />
+      <hr />
+      <Footer />
+    </div>
   </body>
 </html>
 <!--
-<style is:global>
-  :root {
-    --anker: #40aa47;
-    --accent: 136, 58, 234;
-    --accent-light: 224, 204, 250;
-    --accent-dark: 49, 10, 101;
-    --accent-gradient: linear-gradient(
-      45deg,
-      rgb(var(--accent)),
-      rgb(var(--accent-light)) 30%,
-      white 50%
-    );
-  }
-  html {
-    font-family: system-ui, sans-serif;
-    background-size: 224px;
-    box-sizing: border-box;
-  }
-  body {
-    background-color: var(--theme-bg);
-    color: var(--theme-text);
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
-    transition:
-      background-color 0.5s,
-      color 0.5s;
-  }
-
-  main {
-    display: flex;
-    flex-grow: 1;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .fslightbox-slide {
-    border: 5px solid white;
-    border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
-  }
-
-  a {
-    color: var(--anker);
+<style>
+  * {
+    font-family: serif;
   }
 </style>
 -->
