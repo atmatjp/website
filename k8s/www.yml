@@ -1,4 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: astro-website
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: astro-web
+  template:
+    metadata:
+      labels:
+        app: astro-web
+    spec:
       containers:
+      - name: website
+        image: ghcr.io/atmatjp/website:latest
+        ports:
+        - containerPort: 80
+
       - name: cloudflared
         image: cloudflare/cloudflared:latest
         command: ["cloudflared", "tunnel", "--no-autoupdate", "run"]
@@ -8,3 +27,15 @@
             secretKeyRef:
               name: cloudflared-secret
               key: TUNNEL_TOKEN
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: web-service
+spec:
+  selector:
+    app: astro-web
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
