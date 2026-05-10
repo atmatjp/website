@@ -1,9 +1,10 @@
 FROM node:lts AS build
 WORKDIR /app
 
-COPY package*.json ./
-RUN pnpm install
 
+RUN npm install -g pnpm
+COPY package*.json ppm-lock.yaml ./
+RUN pnpm install
 COPY . .
 RUN pnpm run build
 
