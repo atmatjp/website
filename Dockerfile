@@ -2,12 +2,10 @@ FROM node:lts AS build
 WORKDIR /app
 
 
-RUN npm install -g pnpm
-COPY package*.json pnpm-lock.yaml* ./
-RUN pnpm config set only-built-dependencies esbuild,sharp
-RUN pnpm install
+COPY package*.json ./
+RUN npm install
 COPY . .
-RUN pnpm run build
+RUN npm run build
 
 FROM nginx:alpine
 
