@@ -8,6 +8,7 @@ const today = new Date();
   </p>
   <p>Hosted on <a href="/server/">Mate</a></p>
   <p>(c) 2023-{today.getFullYear()} 小林</p>
+  <div class="banner">
   <img src="/banner.gif" alt="" width="88" />
   <a href="https://www.cloudflare.com/">
     <img src="/cloud.png" alt="" width="88" />
@@ -16,6 +17,8 @@ const today = new Date();
   <a href="https://jigsaw.w3.org/css-validator/check/referer">
         <img src="/valid-css-blue.gif" alt="正当なCSSです!" width="88"/>
   </a>
+  <img src="valid-html5.gif" alt="">
+  </div>
   <div class="img">
     <a href="https://www.debian.org/" target="_blank" rel="noopener noreferrer">
       <img src="/debian.png" alt="Debian" />
@@ -25,10 +28,13 @@ const today = new Date();
 
 <style>
   footer .img {
-    text-align: center;
     margin-top: 1rem;
   }
   footer .img a {
+    text-decoration: none;
+  }
+
+  .banner a{
     text-decoration: none;
   }
   footer p {
