@@ -3,65 +3,115 @@ import Layout from "../../layouts/Layout.astro";
 ---
 
 <Layout title="My PC">
-  <h2>My PC</h2>
-  <table>
-    <thead>
+  <h1>所有マシン</h1>
+<div class="table-wrap">
+  <table class="table">
+        <thead>
       <tr>
-        <th>PC</th>
-        <th>用途</th>
+        <th>Item</th>
+        <th>Machine</th>
         <th>OS</th>
+        <th>etc...</th>
       </tr>
     </thead>
     <tbody>
+      <!--Laptop-->
       <tr>
-        <td>m2 MacBook</td>
-        <td>メインマシン</td>
+        <td>Laptop-1</td>
+        <td>M2-MacBook</td>
         <td>macOS</td>
+        <td>主力ノート</td>
       </tr>
       <tr>
-        <td>surface laptop</td>
-        <td>サブ機</td>
-        <td>windows</td>
+        <td>Laptop-2</td>
+        <td>Let's note SV7</td>
+        <td>Debian13</td>
+        <td>準主力ノート</td>
       </tr>
       <tr>
-        <td>Let's note</td>
-        <td>サーバー化予定。linux入れて遊んでた。</td>
-        <td> - </td>
+        <td>Laptop-3</td>
+        <td>Surface Laptop go 3</td>
+        <td>Windows11</td>
+        <td>大学生協産</td>
       </tr>
       <tr>
-        <td>Nec Mate MB-3</td>
-        <td>デスクトップ,サーバー用</td>
-        <td>debian</td>
+        <td>Laptop-4</td>
+        <td>ThinkPad T480s</td>
+        <td>Ubuntu</td>
+        <td>売却済</td>
       </tr>
       <tr>
-        <td>Nec Mate ML-4</td>
-        <td>色々</td>
-        <td>windows</td>
+        <td>Laptop-5</td>
+        <td>ThinkPad X13 Gen6</td>
+        <td>Kubuntu</td>
+        <td>売却済</td>
+      </tr>
+      <tr>
+        <td>Laptop-6</td>
+        <td>Let's note SZ6</td>
+        <td>Open SUSE</td>
+        <td>売却済</td>
+      </tr>
+      <!--Desktop-->
+      <tr>
+        <td>Desktop-1</td>
+        <td>NEC Mate MB-3</td>
+        <td>Windows11</td>
+        <td>主力デスクトップ,GPU:Quadro P1000</td>
+      </tr>
+      <tr>
+        <td>Desktop-2</td>
+        <td>NEC Mate ML-4</td>
+        <td>Debian13</td>
+        <td>ラボに寄贈</td>
+      </tr>
+      <!--Other-->
+      <tr>
+        <td>Other-1</td>
+        <td>NEC Mate MC-4</td>
+        <td>Debian13</td>
+        <td>k3sクラスタノード</td>
+      </tr>
+            <tr>
+        <td>Other-2</td>
+        <td>NEC Mate MC-4</td>
+        <td>Debian13</td>
+        <td>k3sクラスタノード</td>
+      </tr>
+      <tr>
+        <td>Other-3</td>
+        <td>NEC Mate MC-4</td>
+        <td>Debian13</td>
+        <td>k3sクラスタノード</td>
+      </tr>
+      <tr>
+        <td>Other-4</td>
+        <td>NEC Mate MC-6</td>
+        <td>Debian13</td>
+        <td>k3sクラスタノード</td>
+      </tr>
+      <tr>
+        <td>Other-5</td>
+        <td>NEC Mate MC-6</td>
+        <td>Debian13</td>
+        <td>k3sクラスタノード</td>
       </tr>
     </tbody>
   </table>
+  </div>
 </Layout>
 
 <style>
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 1rem;
-    font-size: 0.9rem;
-  }
-  th,
-  td {
-    border: 1px solid #ccc;
-    padding: 0.5rem;
-    text-align: left;
-  }
-  th {
-    background-color: #f4f4f4;
-  }
-  @media (max-width: 480px) {
-    th,
-    td {
-      padding: 0.3rem;
-    }
-  }
-</style>
+.table-wrap {
+  overflow-x: scroll;
+}
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  white-space: nowrap;
+}
+.table th,
+.table td {
+  border: 2px solid #eee;
+  padding: 4px 8px;
+}</style>
