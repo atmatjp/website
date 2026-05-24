@@ -1,0 +1,55 @@
+---
+---
+<div id="recent-posts-container" style="display: contents;">
+  <li>読み込み中...</li>
+</div>
+
+<script>
+  async function fetchRecentPosts() {
+    const container = document.getElementById('recent-posts-container');
+    if (!container) return;
+
+    try {
+      const res = await fetch('https://blog.onji.cc/rss.xml');
+      if (!res.ok) throw new Error('Failed to fetch');
+      const xmlText = await res.text();
+      
+      const parser = new DOMParser();
+      const xmlDoc = parser.parseFromString(xmlText, "text/xml");
+      const items = Array.from(xmlDoc.querySelectorAll("item")).slice(0, 4);
+      
+      if (items.length === 0) {
+        container.innerHTML = '<li>記事が見つかりませんでした。</li>';
+        return;
+      }
+
+      container.innerHTML = items.map(item => {
+        const title = item.querySelector("title")?.textContent || 'No Title';
+        const link = item.querySelector("link")?.textContent || '#';
+        const pubDate = item.querySelector("pubDate")?.textContent || '';
+        const date = pubDate ? new Date(pubDate).toLocaleDateString('ja-JP') : '';
+        
+        return `
+          <li>
+            <span style="font-size: 0.8rem; opacity: 0.8; margin-right: 0.5rem;">${date}</span>
+            <a href="${link}" target="_blank" style="display: inline-flex; align-items: center; gap: 0.2rem;">
+              ${title}
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+            </a>
+          </li>
+        `;
+      }).join('');
+    } catch (e) {
+      console.error(e);
+      container.innerHTML = '<li>ブログ記事の取得に失敗しました。すんません。</li>';
+    }
+  }
+
+  // 初回読み込み時とAstroのページ遷移（View Transitions）時に実行
+  fetchRecentPosts();
+  document.addEventListener('astro:page-load', fetchRecentPosts);
+</script>

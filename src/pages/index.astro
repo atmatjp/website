@@ -1,38 +1,76 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import RecentPosts from "../components/RecentPosts.astro";
 ---
 
 <Layout title="Home">
-  <h1>こばしのサイト</h1>
   <div class="prof">
       <img src="/adam.png" alt="adam" width="200" />
   </div>
+
   <ul>
     <li>
-      Misskey: <a href="https://msk.onji.cc/@atmatjp" target="_blank"
-        >https://msk.onji.cc/@atmatjp</a
-      >
+      Misskey: <a href="https://msk.onji.cc/@atmatjp" target="_blank" style="display: inline-flex; align-items: center; gap: 0.2rem;">
+        https://msk.onji.cc/@atmatjp
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+          <polyline points="15 3 21 3 21 9"></polyline>
+          <line x1="10" y1="14" x2="21" y2="3"></line>
+        </svg>
+      </a>
     </li>
     <li>
-      LastFM: <a href="https://www.last.fm/user/atmatjp" target="_blank"
-        >https://www.last.fm/user/atmatjp</a
-      >
+      LastFM: <a href="https://www.last.fm/user/atmatjp" target="_blank" style="display: inline-flex; align-items: center; gap: 0.2rem;">
+        https://www.last.fm/user/atmatjp
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+          <polyline points="15 3 21 3 21 9"></polyline>
+          <line x1="10" y1="14" x2="21" y2="3"></line>
+        </svg>
+      </a>
     </li>
     <li>
-      GitHub: <a href="https://github.com/atmatjp" target="_blank"
-        >https://github.com/atmatjp</a
-      >
+      GitHub: <a href="https://github.com/atmatjp" target="_blank" style="display: inline-flex; align-items: center; gap: 0.2rem;">
+        https://github.com/atmatjp
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+          <polyline points="15 3 21 3 21 9"></polyline>
+          <line x1="10" y1="14" x2="21" y2="3"></line>
+        </svg>
+      </a>
     </li>
     <li>
-      公開鍵(GnuPG): <a href="https://github.com/atmatjp.gpg"
-        >https://github.com/atmatjp.gpg</a
-      >
+      公開鍵(GnuPG): <a href="https://github.com/atmatjp.gpg" target="_blank" style="display: inline-flex; align-items: center; gap: 0.2rem;">
+        https://github.com/atmatjp.gpg
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+          <polyline points="15 3 21 3 21 9"></polyline>
+          <line x1="10" y1="14" x2="21" y2="3"></line>
+        </svg>
+      </a>
     </li>
   </ul>
-  <h2>Status</h2>
+
+
+    <h2>直近のひとりごと</h2>
+  <ul id="blog-posts">
+    <RecentPosts />
+  </ul>
+
+    <h2>サーバー</h2>
   <ul>
-    <li>
-      <a href="https://uptime.onji.cc/">https://uptime.onji.cc</a>
+    <li><a href="/server/">サーバー情報</a></li>
+    <li>稼働状況: 
+      <a href="https://uptime.onji.cc/" target="_blank" style="display: inline-flex; align-items: center; gap: 0.2rem;">
+        https://uptime.onji.cc
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+          <polyline points="15 3 21 3 21 9"></polyline>
+          <line x1="10" y1="14" x2="21" y2="3"></line>
+        </svg>
+      </a>
     </li>
   </ul>
+
+
 </Layout>

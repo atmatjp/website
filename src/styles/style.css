@@ -1,6 +1,6 @@
 *{
     list-style:square;
-    font-weight: 100;
+    font-weight: 300;
     color: aliceblue;
 }
 
@@ -15,8 +15,8 @@ body {
 .all {
     margin:0 auto ;
     max-width: 750px;
-    padding: 2rem;
-    border-radius: 5px;
+    padding: 1.5rem;
+    border-radius: 8px;
     position: relative;
     background-color: rgb(78, 79, 82);
 }
@@ -30,6 +30,11 @@ body {
     width: 2px;
     background-color: #889ee8;
     border-radius: 2px;
+}
+h1{font-size:30px;}
+
+h1 a{
+    text-decoration:none;
 }
 
 ul{

@@ -1,44 +1,28 @@
+---
+const { pageName } = Astro.props;
+---
 <header>
-  <div class="header-left">
-    <a href="/"> <img src="/pray.png" alt="prayboy" width="90px" /> </a>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/link/">Link</a>
-    </nav>
-  </div>
+    <h1>
+        <a href="/">小橋のサイト</a>
+        {pageName && <span class="page-name"> / {pageName}</span>}
+    </h1>
 </header>
 
 <style>
-  header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-    padding: 1rem 0;
-  }
-  .header-left {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-  }
-  header img {
-    background-color: rgb(113, 114, 127);
-    display: block;
-  }
-  nav {
-    display: flex;
-    gap: 1rem;
-  }
-  nav a {
-    text-decoration: none;
-    font-weight: bold;
-    color: #333;
-  }
-  nav a:hover {
-    text-decoration: underline;
-  }
-  header h1 {
-    margin: 0;
-    font-size: 1.5rem;
-  }
+    header {
+        margin-bottom: 2rem;
+    }
+    h1 {
+        font-size: 1.8rem;
+        margin: 0;
+    }
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+    .page-name {
+        font-size: 1.2rem;
+        font-weight: normal;
+        opacity: 0.8;
+    }
 </style>

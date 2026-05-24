@@ -2,116 +2,248 @@
 import Layout from "../../layouts/Layout.astro";
 ---
 
-<Layout title="My PC">
-  <h1>所有マシン</h1>
-<div class="table-wrap">
-  <table class="table">
-        <thead>
-      <tr>
-        <th>Item</th>
-        <th>Machine</th>
-        <th>OS</th>
-        <th>etc...</th>
-      </tr>
-    </thead>
-    <tbody>
-      <!--Laptop-->
-      <tr>
-        <td>Laptop-1</td>
-        <td>M2-MacBook</td>
-        <td>macOS</td>
-        <td>主力ノート</td>
-      </tr>
-      <tr>
-        <td>Laptop-2</td>
-        <td>Let's note SV7</td>
-        <td>Debian13</td>
-        <td>準主力ノート</td>
-      </tr>
-      <tr>
-        <td>Laptop-3</td>
-        <td>Surface Laptop go 3</td>
-        <td>Windows11</td>
-        <td>大学生協産</td>
-      </tr>
-      <tr>
-        <td>Laptop-4</td>
-        <td>ThinkPad T480s</td>
-        <td>Ubuntu</td>
-        <td>売却済</td>
-      </tr>
-      <tr>
-        <td>Laptop-5</td>
-        <td>ThinkPad X13 Gen6</td>
-        <td>Kubuntu</td>
-        <td>売却済</td>
-      </tr>
-      <tr>
-        <td>Laptop-6</td>
-        <td>Let's note SZ6</td>
-        <td>Open SUSE</td>
-        <td>売却済</td>
-      </tr>
-      <!--Desktop-->
-      <tr>
-        <td>Desktop-1</td>
-        <td>NEC Mate MB-3</td>
-        <td>Windows11</td>
-        <td>主力デスクトップ,GPU:Quadro P1000</td>
-      </tr>
-      <tr>
-        <td>Desktop-2</td>
-        <td>NEC Mate ML-4</td>
-        <td>Debian13</td>
-        <td>ラボに寄贈</td>
-      </tr>
-      <!--Other-->
-      <tr>
-        <td>Other-1</td>
-        <td>NEC Mate MC-4</td>
-        <td>Debian13</td>
-        <td>k3sクラスタノード</td>
-      </tr>
-            <tr>
-        <td>Other-2</td>
-        <td>NEC Mate MC-4</td>
-        <td>Debian13</td>
-        <td>k3sクラスタノード</td>
-      </tr>
-      <tr>
-        <td>Other-3</td>
-        <td>NEC Mate MC-4</td>
-        <td>Debian13</td>
-        <td>k3sクラスタノード</td>
-      </tr>
-      <tr>
-        <td>Other-4</td>
-        <td>NEC Mate MC-6</td>
-        <td>Debian13</td>
-        <td>k3sクラスタノード</td>
-      </tr>
-      <tr>
-        <td>Other-5</td>
-        <td>NEC Mate MC-6</td>
-        <td>Debian13</td>
-        <td>k3sクラスタノード</td>
-      </tr>
-    </tbody>
-  </table>
+<Layout title="Machine">
+  <h2>ノートパソコン</h2>
+  <div class="table-wrap">
+    <table class="table no-item">
+      <thead>
+        <tr>
+          <th>Machine</th>
+          <th>OS</th>
+          <th>Spec</th>
+          <th>etc...</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>M2-MacBook</td>
+          <td>macOS</td>
+          <td>CPU: Apple M2<br>RAM: 8GB<br>SSD: 256GB</td>
+          <td>主力ノートPC<br>傷とか付けたくないので大体家でしか使っていない</td>
+        </tr>
+        <tr>
+          <td>Let's note SV7</td>
+          <td>Debian13 & Windows11</td>
+          <td>CPU: i5 8300U<br>RAM: 8GB<br>SSD: 256GB</td>
+          <td>準主力ノートPC<br>
+            RPSMAポート生やしたり割といじってるかも<br>
+          </td>
+        </tr>
+        <tr>
+          <td>Surface Laptop go 3</td>
+          <td>Windows11</td>
+          <td>CPU: i5 1235U<br>RAM: 8GB<br>SSD: 256GB</td>
+          <td>大学生協産 <br> マジで使ってない。</td>
+        </tr>
+        <tr class="sold">
+          <td>ThinkPad T480s</td>
+          <td>Ubuntu</td>
+          <td>CPU: i5 8300U<br>RAM: 16GB<br>SSD: 256GB</td>
+          <td>売却済</td>
+        </tr>
+        <tr class="sold">
+          <td>ThinkPad X13 Gen6</td>
+          <td>Kubuntu</td>
+          <td>CPU: Ultra 225U<br>RAM: 16GB<br>SSD: 256GB</td>
+          <td>売却済</td>
+        </tr>
+        <tr class="sold">
+          <td>Let's note SZ6</td>
+          <td>Open SUSE</td>
+          <td>CPU: i5 7300U<br>RAM: 8GB<br>SSD: 256GB</td>
+          <td>売却済</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
+
+  <h2>デスクトップ</h2>
+  <div class="table-wrap">
+    <table class="table no-item">
+      <thead>
+        <tr>
+          <th>Machine</th>
+          <th>OS</th>
+          <th>Spec</th>
+          <th>etc...</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>NEC Mate MB-3</td>
+          <td>Windows11</td>
+          <td>CPU: i7 8700 <br> RAM: 64GB <br> SSD: 256GB + 1TB <br> GPU: Quadro P1000</td>
+          <td>主力デスクトップ <br> GPU搭載に際して内部加工済み <br> 開発 , ゲーム , 重い処理とか</td>
+        </tr>
+        <tr>
+          <td>NEC Mate ML-4</td>
+          <td>Debian13</td>
+          <td>CPU: i3 8100 <br> RAM: 12GB <br> SSD: 256GB</td>
+          <td>ラボに寄贈</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>サーバー</h2>
+  <div class="table-wrap">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Machine</th>
+          <th>OS</th>
+          <th>Spec</th>
+          <th>etc...</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Cluster-1</td>
+          <td>NEC Mate MC-4</td>
+          <td>Debian13</td>
+          <td>CPU: i5 8500T <br> RAM: 8GB <br> SSD: 256GB</td>
+          <td>k3sクラスタノード</td>
+        </tr>
+        <tr>
+          <td>Cluster-2</td>
+          <td>NEC Mate MC-4</td>
+          <td>Debian13</td>
+          <td>CPU: i5 8500T <br> RAM: 8GB <br> SSD: 256GB</td>
+          <td>k3sクラスタノード</td>
+        </tr>
+        <tr>
+          <td>Cluster-3</td>
+          <td>NEC Mate MC-4</td>
+          <td>Debian13</td>
+          <td>CPU: i5 8500T <br> RAM: 8GB <br> SSD: 256GB</td>
+          <td>k3sクラスタノード</td>
+        </tr>
+        <tr>
+          <td>Cluster-4</td>
+          <td>NEC Mate MC-6</td>
+          <td>Debian13</td>
+          <td>CPU: i3 9100T <br> RAM: 8GB <br> SSD: 256GB</td>
+          <td>k3sクラスタノード</td>
+        </tr>
+        <tr>
+          <td>Cluster-5</td>
+          <td>NEC Mate MC-6</td>
+          <td>Debian13</td>
+          <td>CPU: i3 9100T <br> RAM: 8GB <br> SSD: 256GB</td>
+          <td>k3sクラスタノード</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+      <h2>シングルボードコンピュータ</h2>
+  <div class="table-wrap">
+    <table class="table no-item">
+      <thead>
+        <tr>
+          <th>Machine</th>
+          <th>OS</th>
+          <th>Spec</th>
+          <th>etc...</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Raspberry Pi Zero 2W</td>
+          <td>-</td>
+          <td>CPU: BCM2710A1 <br> RAM: 512MB</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>ESP32-C3</td>
+          <td>-</td>
+          <td>RISC-V Single-core</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>ESP32-C3</td>
+          <td>-</td>
+          <td>RISC-V Single-core</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>Arduino Uno R3</td>
+          <td>-</td>
+          <td>ATmega328P</td>
+          <td>自動水やり機 (現在不動)</td>
+        </tr>
+        <tr>
+          <td>Arduino Uno R3</td>
+          <td>-</td>
+          <td>ATmega328P</td>
+          <td>サーバー周辺の温度センサーとして使用</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
 </Layout>
 
 <style>
 .table-wrap {
-  overflow-x: scroll;
+  overflow-x: auto;
+  margin-top: 1.5rem;
 }
 .table {
   width: 100%;
   border-collapse: collapse;
   white-space: nowrap;
+  font-size: 0.9rem;
+  color: aliceblue;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 .table th,
 .table td {
-  border: 2px solid #eee;
-  padding: 4px 8px;
-}</style>
+  padding: 1rem 1.2rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  min-width: 120px;
+}
+.table td:nth-child(3) {
+  min-width: 180px;
+}
+
+.table tr.sold {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #666;
+}
+
+.table:not(.no-item) th:first-child,
+.table:not(.no-item) td:first-child {
+  border-right: 2px solid rgba(136, 158, 232, 0.3);
+}
+.table.no-item th:first-child,
+.table.no-item td:first-child {
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+.table th:last-child,
+.table td:last-child {
+  border-right: none;
+}
+.table th {
+  color: #889ee8;
+  font-weight: bold;
+  border-bottom: 2px solid #889ee8;
+  background-color: rgba(136, 158, 232, 0.05);
+}
+.table tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+.table tr:hover {
+  background-color: rgba(136, 158, 232, 0.05);
+}
+@media (max-width: 480px) {
+  .table th,
+  .table td {
+    padding: 0.5rem;
+  }
+}
+</style>
