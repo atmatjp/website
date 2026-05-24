@@ -11,6 +11,7 @@
   "dependencies": {
     "astro": "^6.1.1",
     "fslightbox": "^3.4.1",
+    "luminous-lightbox": "^2.4.0",
     "pnpm": "^10.30.2"
   }
 }
