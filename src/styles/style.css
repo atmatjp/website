@@ -46,6 +46,19 @@ img {
     height: auto;
 }
 
+@media screen and (max-width: 600px) {
+  body {
+    margin: 0;
+  }
+  .all {
+    padding: 1rem 1rem;
+    border-radius: 0;
+  }
+  .all::before {
+    display: none; /* スマホでは左の青い線を非表示にするか、お好みで調整 */
+  }
+}
+
 @media screen and (max-width: 460px) {
   .lum-lightbox-inner img {
     max-width: 100% !important;
