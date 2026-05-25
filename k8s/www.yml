@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: website
-        image: ghcr.io/atmatjp/website:82e8fa122623622fe056d1c53e66039205633b5d
+        image: ghcr.io/atmatjp/website:789d9a485dc4fc37f733c53bfd24bb03b3bff66f
         ports:
         - containerPort: 80
 
