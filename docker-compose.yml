@@ -1,0 +1,31 @@
+services:
+  www:
+    image: ghcr.io/atmatjp/website:latest
+    container_name: www
+    restart: unless-stopped
+    networks:
+      - tunnel-net
+
+  tunnel:
+    image: cloudflare/cloudflared:latest
+    container_name: cloudflared-tunnel
+    restart: unless-stopped
+    command: tunnel run
+    environment:
+      - TUNNEL_TOKEN=${TUNNEL_TOKEN}
+    networks:
+      - tunnel-net
+    depends_on:
+      - www
+
+  watchtower:
+    image: containrrr/watchtower
+    container_name: watchtower
+    restart: unless-stopped
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: --interval 300 --cleanup
+
+networks:
+  tunnel-net:
+    driver: bridge
