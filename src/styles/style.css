@@ -27,7 +27,7 @@ body {
     top: 40px;
     bottom: 40px;
     width: 2px;
-    background-color: #889ee8;
+    /*background-color: #889ee8;*/
     border-radius: 2px;
 }
 h1{font-size:30px;}
@@ -54,7 +54,7 @@ img {
     border-radius: 0;
   }
   .all::before {
-    display: none; /* スマホでは左の青い線を非表示にするか、お好みで調整 */
+    display: none;
   }
 }
 
