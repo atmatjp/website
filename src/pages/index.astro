@@ -9,11 +9,22 @@ import PixelCat from "../components/PixelCat.astro";
     <PixelCat />
   </div>
 
-  <p>
-    今年でなんと<a href="/fist/">21歳</a
-    >になりました。これからもよろしくお願いします。<br
-    />義務はないので、お気軽に！
-  </p>
+  <dl class="profile">
+    <dt>Name:</dt>
+    <dd>小林</dd>
+    <dt>Location:</dt>
+    <dd>大阪府</dd>
+    <dt>Age:</dt>
+    <dd><a href="/fist/">21歳</a></dd>
+    <dt>Interests&Hobbies:</dt>
+    <dd>インフラ、ハードウェア、旅行、ゲーム</dd>
+  </dl>
+
+
+  
+  <ul>
+    <li><a href="/work/">工作</a></li>
+  </ul>
 
   <ul>
     <li>
@@ -154,3 +165,14 @@ import PixelCat from "../components/PixelCat.astro";
     </li>
   </ul>
 </Layout>
+
+<style>
+.profile dt {
+  font-size: 0.85rem;
+  opacity: 0.6;
+}
+.profile dd {
+  margin: 0 0 0.8rem;
+  font-size: 1.2rem;
+}
+</style>
